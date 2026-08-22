@@ -377,32 +377,148 @@
 
 @media (max-width: 768px) {
   nav {
+    position: fixed;
+    width: 100%;
+    min-width: 0;
     padding: 0.8rem 1rem;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
+    gap: 0.75rem;
+  }
+
+  .nav-logo {
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .nav-logo .sun {
+    width: 30px;
+    height: 30px;
+  }
+
+  .nav-logo span {
+    font-size: 1rem;
   }
 
   .nav-links {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 0.6rem 1rem;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.35rem;
     width: 100%;
-    margin: 0.7rem 0 0;
-    padding: 0;
+    margin: 0;
   }
 
   .nav-links li {
-    flex: 0 1 auto;
+    min-width: 0;
     list-style: none;
   }
 
   .nav-links a {
-    white-space: nowrap;
-    font-size: clamp(0.55rem, 2.5vw, 0.75rem);
-    letter-spacing: 0.02em;
-    text-transform: none;
+    display: block;
+    padding: 0.45rem 0.25rem;
+    font-size: 0.8rem;
+    line-height: 1.2;
+    text-align: center;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    letter-spacing: 0;
+  }
+
+  section {
+    width: 100%;
+    padding: 4rem 1.25rem;
+  }
+
+  .hero {
+    min-height: 100svh;
+    padding: 13rem 1.25rem 4rem;
+  }
+
+  .hero-sun {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.2rem, 12vw, 4rem);
+  }
+
+  .hero-tagline {
+    font-size: 1rem;
+  }
+
+  .hero-sub {
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+  }
+
+  .hero-slogan {
+    max-width: 100%;
+    padding: 0.7rem 1rem;
+    font-size: 0.8rem;
+    letter-spacing: 0.05em;
+  }
+
+  .about-grid,
+  .ideology-grid,
+  .pillars-grid,
+  .state-model {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .about-quote {
+    font-size: 1.2rem;
+    padding-right: 1rem;
+  }
+
+  .pillars,
+  .manifesto {
+    padding: 4rem 1.25rem;
+  }
+
+  .ideo-card,
+  .pillar,
+  .state-item {
+    padding: 1.5rem;
+  }
+
+  .chapter {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+    padding: 1.5rem 0;
+  }
+
+  .chapter-num {
+    font-size: 2.2rem;
+    min-width: auto;
+  }
+
+  .join {
+    padding: 5rem 1.25rem;
+  }
+
+  .btn,
+  .btn-outline {
+    display: block;
+    width: 100%;
+    margin: 0 0 0.75rem;
+    padding: 0.9rem 1rem;
+  }
+
+  footer {
+    padding: 2rem 1.25rem;
+    flex-direction: column;
+    gap: 1.25rem;
+    text-align: center;
+  }
+
+  .footer-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem 1.25rem;
   }
 }
 
